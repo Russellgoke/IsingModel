@@ -6,13 +6,13 @@
 
 class IsingModel {
 public:
-    IsingModel();
+    IsingModel(int xDim, int yDim, int zDim);
     void runSimulation(int iterations);
     void saveResults(const std::string& filename);
 
 private:
-    int TODO; // set up params
-    std::vector<std::vector<std::vector<int>>> lattice; //Set up lattice dimensionality
+    int xDim, yDim, zDim; // set up params
+    std::vector<std::vector<std::vector<int>>> lattice;
     void initializeLattice();
     void updateLattice();
     double calculateEnergy();
